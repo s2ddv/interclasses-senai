@@ -81,3 +81,26 @@ header {
 #spanAmarelo { 
     color: #fbff00;
 }
+
+#box-formulario { 
+    font-family: "Neue Plak Extended Bold";
+    display: flex; 
+    gap: 2rem;
+    font-family: "Neue Plak Extended Bold";
+    width: 50rem;
+    height: 13rem;
+    background-color: #c0c0c0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+.btn-formulario { 
+    display: flex;
+    color: #C20717;
+    
+}

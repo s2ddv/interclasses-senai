@@ -25,11 +25,11 @@ body {
     color: rgb(255 0 0); 
 }
 
-    @keyframes blinker {
-        50% {
-            opacity: 0;
-        }
+@keyframes blinker {
+    50% {
+        opacity: 0;
     }
+}
 
 .secao-esportes {
     width: 100%;
@@ -44,9 +44,25 @@ body {
 }
 
 #futebol-esporte {
-    height: 110vh;
-    background-image: url(/frontend/src/assets/img/futebol-bg-5.png);
-    background-position: center;
+    position: relative;
+    height: 140vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-left: 2rem; 
+}
+
+#futebol-esporte::before { 
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background-image: url(/frontend/src/assets/img/futebol-bg-5.png); 
+    background-position: inherit;
+    background-size: inherit;
+    filter: blur(2px) brightness(40%);
+    transform: scale(1.05); 
+    z-index: 0;
 }
 
 #futebol-esporte .esportes-container {
@@ -54,22 +70,59 @@ body {
     z-index: 2;
 }
 
-.blur-overlay { 
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
+#volei-esporte {
+    position: relative;
+    height: 140vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-left: 2rem; 
 }
 
-#volei-esporte {
-    height: 110vh;
+#volei-esporte::before { 
+    content: "";
+    position: absolute;
+    inset: 0; 
     background-image: url(/frontend/src/assets/img/volei-bg-3.jpeg);
+    background-position: inherit;
+    background-size: inherit;
+    filter: blur(2px) brightness(40%);
+    transform: scale(1.05); 
+    z-index: 0;
+}
+
+#volei-esporte .esportes-container {
+    position: relative;
+    z-index: 2;
 }
 
 #tenis-de-mesa-esporte {
-    height: 110vh; 
-    background-image: url(/frontend/src/assets/img/tenis-de-mesa-bg-3.jpeg);
+    position: relative;
+    height: 140vh; 
     background-position: center bottom;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-left: 2rem; 
+}
+
+#tenis-de-mesa-esporte::before { 
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background-image: url(/frontend/src/assets/img/tenis-de-mesa-bg-3.jpeg); 
+    background-position: inherit;
+    background-size: inherit;
+    filter: blur(2px) brightness(40%);
+    transform: scale(1.05); 
+    z-index: 0;
+}
+
+#tenis-de-mesa-esporte .esportes-container {
+    position: relative;
+    z-index: 2;
 }
 
 #spanVermelho {
@@ -80,7 +133,6 @@ body {
     font-family: "Neue Plak Extended Bold";
     font-size: 3rem;
     color: white;
-    padding-right: 40rem;
 }
 
 .esportes-container p {
@@ -89,6 +141,20 @@ body {
     font-size: 1.8rem;
 }
 
-#futebol-esporte .esportes-container h2 {
-    padding-right: 40rem;
-} 
+#futebol-esporte .esportes-container { 
+    position: relative;
+    z-index: 2;
+    transform: translateY(-100%);
+}
+
+#volei-esporte .esportes-container { 
+    position: relative;
+    z-index: 2;
+    transform: translateY(-100%);
+}
+
+#tenis-de-mesa-esporte .esportes-container { 
+    position: relative;
+    z-index: 2;
+    transform: translateY(-100%);
+}
