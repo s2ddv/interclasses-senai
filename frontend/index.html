@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="/frontend/src/assets/utils/css/global.css">
     <link rel="stylesheet" href="/frontend/src/assets/utils/css/fonts.css"> 
     <link rel="stylesheet" href="/frontend/src/assets/utils/css/header.css">
+    <link rel="stylesheet" href="/frontend/src/assets/utils/css/footer.css">
     <title>Interclasses</title>
 </head>
 <body>
-    <header>
-        <button id="menu" aria-label="menu" title="menu">
-            <img src="/frontend/src/assets/img/icons8-menu-50.png">
-        </button>
-        <div id="sidebar">
+    <nav>
+        <button id="menu" aria-label="menu" title="menu"></button>
+        <div id="sidebar" class>
             <ul>
-                <li><a href="#futebol">FUTEBOL</a></li>
-                <li><a href="#volei">VÔLEI</a></li>
-                <li><a href="#tenis-de-mesa">TÊNIS DE MESA</a></li>
-                <li><a href="#inscricoes">INSCRIÇÕES</a></li>
+                <li><a href="#futebol-esportes">FUTEBOL</a></li>
+                <li><a href="#volei-esportes">VÔLEI</a></li>
+                <li><a href="#tenis-de-mesa-esportes">TÊNIS DE MESA</a></li>
+                <li><a href="#contato">CONTATO</a></li>
             </ul>
         </div>
+    </nav>
+    <header>
         <div class="box-container-title-1">
             <div id="titulo">
                 <h1>Interclasses:</h1>
@@ -46,45 +47,95 @@
     </header>
 
     <section class="secao-esportes" id="futebol-esporte">
-        <div class="esportes-container">
-            <div class="esportes-titulo">
-                <h2 class="tituloGSAP">FUTEBOL</h2>
-            </div>
-            <div class="esportes-descricao">
-                <p class="textGSAP">Jogue, brilhe e comemore como nunca!</p>
-                <p class="textGSAP">O estrelato nunca esteve mais próximo de você</p>
-                <p class="textGSAP">sonhe seu sonho com a gente!</p>
-            </div>
-        </div>
+        <div class="blur-overlay"></div> 
+            <div class="esportes-container">
+                <div class="esportes-titulo">
+                    <h2 class="tituloGSAP">
+                        FUTEBOL
+                    </h2>
+                </div>
+                <div class="esportes-descricao">
+                    <p class="textGSAP">
+                        Jogue, brilhe e comemore como nunca!
+                    </p>
+                    <p class="textGSAP">
+                        O estrelato nunca esteve mais próximo de 
+                    </p>
+                    <p class="textGSAP">
+                        você, sonhe seu sonho com a gente!
+                    </p>
+                </div>
+            </div>       
     </section>
     <section class="secao-esportes" id="volei-esporte">
         <div class="esportes-container">
             <div class="esportes-titulo">
-                <h2 class="tituloGSAP">VÔLEI</h2>
+                <h2 class="tituloGSAP">
+                    VÔLEI
+                </h2>
             </div>
             <div class="esportes-descricao">
-                <p class="textGSAP">Corte, bloqueio e passe!</p>
-                <p class="textGSAP">Toda energia das maiores ligas de Vôlei do mundo inteiro bem pertinho de você!</p>
+                <p class="textGSAP">
+                    Corte, bloqueio e passe!
+                </p>
+                <p class="textGSAP">
+                    Toda energia das maiores ligas de Vôlei do mundo inteiro bem pertinho de você!
+                </p>
             </div>
         </div>
     </section>
     <section class="secao-esportes" id="tenis-de-mesa-esporte">
         <div class="esportes-container">
             <div class="esportes-titulo">
-                <h2 class="tituloGSAP">TÊNIS DE MESA</h2>
+                <h2 class="tituloGSAP">
+                    TÊNIS DE MESA
+                </h2>
             </div>
             <div class="esportes-descricao">
-                <p class="textGSAP">Mesa, rede e raquete!</p>
-                <p class="textGSAP">Tudo se unindo num conjunto de estratégia e habilidade, que esperam sua participação!</p>
+                <p class="textGSAP">
+                    Mesa, rede e raquete!
+                </p>
+                <p class="textGSAP">
+                    Tudo se unindo num conjunto de estratégia e habilidade, que esperam sua participação!
+                </p>
             </div>
         </div>
     </section>
     
     <footer>
-
+        <div id="contato">
+            <div class="abasContato">
+                <h5>Sobre nós</h5>
+                <p>Site desenvolvido por:</p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/s2ddv" target="_blank" class="githubLink">
+                            <img src="/frontend/src/assets/img/icons8-github-50.png">
+                            <p>Samuel Barbosa</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/elocmachado" target="_blank" class="githubLink">
+                            <img src="/frontend/src/assets/img/icons8-github-50.png">
+                            <p>Eloisa Machado</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="abasContato" id="boxLogo">
+                <img class="senai" src="/frontend/src/assets/img/senai-logo.png" alt="logo SENAI">
+                <img class="aapm" src="/frontend/src/assets/img/logo-aapm-white-2.png" alt="logo-AAPM">
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/split-type"></script>
+    <script>gsap.registerPlugin(ScrollTrigger)</script>
     <script src="/frontend/src/assets/utils/js/gsap.js"></script>
+    <script src="/frontend/src/assets/utils/js/lenis.js"></script>
+    <script src="/frontend/src/assets/utils/js/script.js"></script>
 </body>
 </html>

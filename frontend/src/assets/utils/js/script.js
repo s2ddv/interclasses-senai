@@ -1,3 +1,6 @@
-document.querySelector("#menu").addEventListener("click", () => {
-    document.querySelector("#sidebar").classList.toggle("active")
+const menuButton = document.getElementById("menu");
+const sidebar = document.getElementById("sidebar");
+
+menuButton.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
 });
