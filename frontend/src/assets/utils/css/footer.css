@@ -65,12 +65,12 @@ footer {
     align-items: center;
     gap: 2rem;
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
     margin-left: auto;
 }
 
 #boxLogo img { 
-    height: 80px;
+    height: 90px;
     object-fit: contain;
 }
 

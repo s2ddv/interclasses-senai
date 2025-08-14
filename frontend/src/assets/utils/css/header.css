@@ -83,10 +83,9 @@ header {
 }
 
 #box-formulario { 
-    font-family: "Neue Plak Extended Bold";
+    font-family: "Neue Plak Extended SemiBold";
     display: flex; 
     gap: 2rem;
-    font-family: "Neue Plak Extended Bold";
     width: 50rem;
     height: 13rem;
     background-color: #c0c0c0;
@@ -99,8 +98,42 @@ header {
     transform: translate(-50%, 10%);
 }
 
-.btn-formulario { 
+.btn { 
     display: flex;
-    color: #C20717;
-    
+    transition: all .5s;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn--action { 
+    display: block;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #17181dbb;
+    color: #fff;
+}
+
+.btn--action:hover { 
+    background-color: #C20717;
+}
+
+.btn--action span {
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+    font-family: 'Neue Plak Extended Bold';
+}
+
+.btn--action:hover span {
+    filter: brightness(130%), saturate(200%);
+}
+
+.btn--action:hover span:before {
+    left: 0;
+    opacity: 1;
+}
+
+.btn--action:active {
+    box-shadow: 0 5px #1c1d20;
 }

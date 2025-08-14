@@ -130,13 +130,13 @@ body {
 }
 
 .esportes-container h2 {
-    font-family: "Neue Plak Extended Bold";
+    font-family: 'Neue Plak Extended Bold';
     font-size: 3rem;
     color: white;
 }
 
 .esportes-container p {
-    font-family: "Neue Plak Extended Bold";
+    font-family: 'Neue Plak Extended SemiBold';
     color: rgba(255, 255, 255, 0.50);
     font-size: 1.8rem;
 }
