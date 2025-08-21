@@ -24,9 +24,3 @@ form.addEventListener("submit", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Tab") document.body.classList.add("outline");
 });
-
-async function criarUsuario() {
-  Event.preventDefault();
-
-  const nome = document.getElementById("nome").value;
-}

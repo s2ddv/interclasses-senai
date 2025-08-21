@@ -6,6 +6,13 @@ from .serializers import UsuariosSerializer
 from .models import Modalidades 
 from .serializers import ModalidadesSerializer
 
+def criar_usuarios(request):
+    serializer = UsuariosSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=201)
+    return Response(serialiazer.errors, status=400)    
+
 class ModalidadesList(generics.ListCreateAPIView):
     queryset = Modalidades.objects.all()
     serializer_class = ModalidadesSerializer
