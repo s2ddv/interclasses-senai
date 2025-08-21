@@ -1,160 +1,262 @@
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --radius: 16px;
+  --shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  --input-border: #1c2740;
+  --font: #f2f8fc;
+  --bg-color1: #36454f;
+  --bg-color2: #252525;
+  --blink-color: rgb(255 0 0);
+  --span-color: #c20717;
 }
 
-.menu-slide { 
-    height: 100%;
-    width: 180px;
-    position: absolute;
-    background-color: #36454F;
-    transition: 0.5 ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul li a { 
-    color: #f2f8fc;
+.menu-slide {
+  height: 100%;
+  width: 180px;
+  position: absolute;
+  background-color: var(--bg-color1);
+  transition: 0.5 ease-in-out;
 }
 
-body { 
-    background-color: #252525;
+ul li a {
+  color: #f2f8fc;
 }
 
-.blink { 
-    animation: blink 1s linear infinite;
-    color: rgb(255 0 0); 
+body {
+  background-color: var(--bg-color2);
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+  color: var(--blink-color);
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
 .secao-esportes {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #futebol-esporte {
-    position: relative;
-    height: 140vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    padding-left: 2rem; 
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
 }
 
-#futebol-esporte::before { 
-    content: "";
-    position: absolute;
-    inset: 0; 
-    background-image: url(/frontend/src/assets/img/futebol-bg-5.png); 
-    background-position: inherit;
-    background-size: inherit;
-    filter: blur(2px) brightness(40%);
-    transform: scale(1.05); 
-    z-index: 0;
+#futebol-esporte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/frontend/src/assets/img/futebol-bg-5.png);
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(2px) brightness(40%);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
 #futebol-esporte .esportes-container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 #volei-esporte {
-    position: relative;
-    height: 140vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    padding-left: 2rem; 
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
 }
 
-#volei-esporte::before { 
-    content: "";
-    position: absolute;
-    inset: 0; 
-    background-image: url(/frontend/src/assets/img/volei-bg-3.jpeg);
-    background-position: inherit;
-    background-size: inherit;
-    filter: blur(2px) brightness(40%);
-    transform: scale(1.05); 
-    z-index: 0;
+#volei-esporte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/frontend/src/assets/img/volei-bg-3.jpeg);
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(2px) brightness(40%);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
 #volei-esporte .esportes-container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 #tenis-de-mesa-esporte {
-    position: relative;
-    height: 140vh; 
-    background-position: center bottom;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    padding-left: 2rem; 
+  position: relative;
+  height: 120vh;
+  background-position: center bottom;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
 }
 
-#tenis-de-mesa-esporte::before { 
-    content: "";
-    position: absolute;
-    inset: 0; 
-    background-image: url(/frontend/src/assets/img/tenis-de-mesa-bg-3.jpeg); 
-    background-position: inherit;
-    background-size: inherit;
-    filter: blur(2px) brightness(40%);
-    transform: scale(1.05); 
-    z-index: 0;
+#tenis-de-mesa-esporte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/frontend/src/assets/img/tenis-de-mesa-bg-3.jpeg);
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(2px) brightness(40%);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
 #tenis-de-mesa-esporte .esportes-container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 #spanVermelho {
-    color: #C20717;
+  color: var(--span-color);
+}
+
+.esportes-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .esportes-container h2 {
-    font-family: 'Neue Plak Extended Bold';
-    font-size: 3rem;
-    color: white;
+  font-family: "Neue Plak Extended Bold";
+  font-size: 4rem;
+  color: white;
 }
 
 .esportes-container p {
-    font-family: 'Neue Plak Extended SemiBold';
-    color: rgba(255, 255, 255, 0.50);
-    font-size: 1.8rem;
+  font-family: "Neue Plak Extended SemiBold";
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
 }
 
-#futebol-esporte .esportes-container { 
-    position: relative;
-    z-index: 2;
-    transform: translateY(-100%);
+#futebol-esporte .esportes-container {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-100%);
 }
 
-#volei-esporte .esportes-container { 
-    position: relative;
-    z-index: 2;
-    transform: translateY(-100%);
+#volei-esporte .esportes-container {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-100%);
 }
 
-#tenis-de-mesa-esporte .esportes-container { 
-    position: relative;
-    z-index: 2;
-    transform: translateY(-100%);
+#tenis-de-mesa-esporte .esportes-container {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-100%);
+}
+
+.esportes-regulamento-container {
+  z-index: 999;
+  background-color: white;
+  position: absolute;
+  right: -60rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem;
+  font-family: "Neue Plak Extended SemiBold";
+  background:
+    radial-gradient(
+      600px 340px at 100% 0%,
+      rgba(229, 57, 53, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(180deg, rgba(17, 26, 43, 0.85), rgba(15, 20, 32, 0.95));
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--font);
+}
+
+.esportes-regulamento-container-tenis-de-mesa {
+  z-index: 999;
+  background-color: white;
+  position: absolute;
+  right: -45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem;
+  font-family: "Neue Plak Extended SemiBold";
+  background:
+    radial-gradient(
+      600px 340px at 100% 0%,
+      rgba(229, 57, 53, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(180deg, rgba(17, 26, 43, 0.85), rgba(15, 20, 32, 0.95));
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--font);
+}
+
+.secao-aapm {
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.informacoes-aapm {
+  display: flex;
+  font-family: "Neue Plak Extended SemiBold";
+  flex-direction: column;
+  align-items: center;
+  background:
+    radial-gradient(
+      600px 340px at 100% 0%,
+      rgba(229, 57, 53, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(180deg, rgba(17, 26, 43, 0.85), rgba(15, 20, 32, 0.95));
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--font);
+}
+
+.lista-beneficios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+.item {
+  padding: 15px;
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }

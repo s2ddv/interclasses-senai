@@ -1,139 +1,146 @@
-header { 
-    width: 100%;
-    height: 68.75rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    background-attachment: fixed;
+header {
+  width: 100%;
+  height: 68.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-attachment: fixed;
 }
 
 #blink {
-    font-family: "Neue Plak Extended Bold"; 
-    animation: blink-opacity 2s linear infinite;
-    color: rgb(0, 157, 255);
-    }
-
-    @keyframes blink-opacity {
-        0%, 50%, 100% { opacity: 1; }
-        25%, 75% { opacity: 0; }    
+  font-family: "Neue Plak Extended Bold";
+  animation: blink-opacity 2s linear infinite;
+  color: rgb(0, 157, 255);
 }
 
-#titulo { 
-    margin-top: 10%;
-    width: 50.25rem;
-    height: 15rem;
+@keyframes blink-opacity {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
-.box-container-title-1 { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#titulo {
+  margin-top: 10%;
+  width: 50.25rem;
+  height: 15rem;
 }
 
-.box-container-title-2 { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box-container-title-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.box-container-date { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box-container-title-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#titulo h1 { 
-    color: #e7e7e7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Neue Plak Extended Bold";
-    font-size: 7.5rem;
-    font-weight: 400;
-    line-height: 7.5rem;
+.box-container-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#titulo-2 h1 { 
-    color: #DDDDDD80;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Neue Plak Extended Bold";
-    font-size: 4.5rem;
-    font-weight: 400;
-    line-height: 7.5rem;
-    margin-top: -25%;
+#titulo h1 {
+  color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Neue Plak Extended Bold";
+  font-size: 7.5rem;
+  font-weight: 400;
+  line-height: 7.5rem;
 }
 
-#spanVermelho { 
-    color: #C20717;
+#titulo-2 h1 {
+  color: #dddddd80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Neue Plak Extended Bold";
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 7.5rem;
+  margin-top: -25%;
 }
 
-#spanAzul { 
-    color: #009dff;
+#spanVermelho {
+  color: #c20717;
 }
 
-#spanVerde { 
-    color: #11FF00;
+#spanAzul {
+  color: #009dff;
 }
 
-#spanAmarelo { 
-    color: #fbff00;
+#spanVerde {
+  color: #11ff00;
 }
 
-#box-formulario { 
-    font-family: "Neue Plak Extended SemiBold";
-    display: flex; 
-    gap: 2rem;
-    width: 50rem;
-    height: 13rem;
-    background-color: #c0c0c0;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 10%);
+#spanAmarelo {
+  color: #fbff00;
 }
 
-.btn { 
-    display: flex;
-    transition: all .5s;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
+#box-formulario {
+  font-family: "Neue Plak Extended SemiBold";
+  display: flex;
+  gap: 2rem;
+  width: 50rem;
+  height: 13rem;
+  background-color: #c0c0c0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
 }
 
-.btn--action { 
-    display: block;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: #17181dbb;
-    color: #fff;
+.btn {
+  display: flex;
+  transition: all 0.5s;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.btn--action:hover { 
-    background-color: #C20717;
+.btn--action {
+  display: block;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #17181dbb;
+  color: #fff;
+}
+
+.btn--action:hover {
+  background-color: #c20717;
 }
 
 .btn--action span {
-    display: inline-block;
-    position: relative;
-    transition: all .5s ease;
-    font-family: 'Neue Plak Extended Bold';
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease;
+  font-family: "Neue Plak Extended Bold";
 }
 
 .btn--action:hover span {
-    filter: brightness(130%), saturate(200%);
+  filter: brightness(130%), saturate(200%);
 }
 
 .btn--action:hover span:before {
-    left: 0;
-    opacity: 1;
+  left: 0;
+  opacity: 1;
 }
 
 .btn--action:active {
-    box-shadow: 0 5px #1c1d20;
+  box-shadow: 0 5px #1c1d20;
 }

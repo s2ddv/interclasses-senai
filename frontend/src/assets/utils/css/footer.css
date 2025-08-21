@@ -1,80 +1,82 @@
 footer {
-    width: 100%;
-    height: 100vh;
-    background-color: #1c1d20;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #1c1d20;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 #contato {
-    width: 80%;
-    font-family: "Neue Plak SemiBold";
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 2rem;
+  width: 80%;
+  font-family: "Neue Plak SemiBold";
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.abasContato { 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    flex: 1; 
+.abasContato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
 }
 
-.abasContato ul { 
-    list-style: none;
+.abasContato ul {
+  list-style: none;
 }
 
 .abasContato h5 {
-    font-size: 2rem;
-    color: white;
+  font-size: 2rem;
+  color: white;
 }
 
-.abasContato a, .abasContato li, .abasContato p {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.50);
+.abasContato a,
+.abasContato li,
+.abasContato p {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .githubLink {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .githubLink img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 1.5%;
-    color: white;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 1.5%;
+  color: white;
 }
 
 #logo {
-    width: 12%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 12%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#boxLogo { 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    flex: 1;
-    min-width: 300px;
-    margin-left: auto;
+#boxLogo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  min-width: 300px;
+  margin-left: auto;
 }
 
-#boxLogo img { 
-    height: 90px;
-    object-fit: contain;
+#boxLogo img {
+  height: 90px;
+  object-fit: contain;
 }
 
-.senai, .aapm { 
-    width: auto;
+.senai,
+.aapm {
+  width: auto;
 }
-

@@ -1,14 +1,17 @@
 @font-face {
-    font-family: 'Neue Plak Extended Bold';
-    src: url('/frontend/src/assets/utils/fonts/Neue\ Plak\ Extended\ Bold.woff') format('truetype');
+  font-family: "Neue Plak Extended Bold";
+  src: url("/frontend/src/assets/utils/fonts/Neue\ Plak\ Extended\ Bold.woff")
+    format("truetype");
 }
 
 @font-face {
-    font-family: 'Neue Plak Extended SemiBold';
-    src: url('/frontend/src/assets/utils/fonts/Neue\ Plak\ Extended\ SemiBold.woff') format('truetype');
+  font-family: "Neue Plak Extended SemiBold";
+  src: url("/frontend/src/assets/utils/fonts/Neue\ Plak\ Extended\ SemiBold.woff")
+    format("truetype");
 }
 
 @font-face {
-    font-family: 'Neue Plak SemiBold';
-    src: url('/frontend/src/assets/utils/fonts/Neue\ Plak\ SemiBold.woff') format('truetype');
+  font-family: "Neue Plak SemiBold";
+  src: url("/frontend/src/assets/utils/fonts/Neue\ Plak\ SemiBold.woff")
+    format("truetype");
 }
