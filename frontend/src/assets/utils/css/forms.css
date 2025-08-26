@@ -196,14 +196,14 @@ select:focus {
 
 .password-toggle {
   position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  top: 63%;
+  right: 4px;
+  transform: translateY(-45%);
   background: transparent;
   border: 0;
   color: #9fb1cf;
   cursor: pointer;
-  padding: 6px 8px;
+  height: 40px;
   border-radius: 10px;
 }
 .password-toggle:hover {

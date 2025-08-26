@@ -24,7 +24,7 @@
         <div class="header">
           <span class="badge">INTERCLASSES • SENAI</span>
         </div>
-        <form id="form-inscricao" novalidate>
+        <form id="form-inscricao">
           <h1 class="title">Inscreva-se</h1>
           <p class="subtitle">
             Preencha seus dados para participar do INTERCLASSES.
@@ -98,15 +98,9 @@
               placeholder="Crie uma senha"
               required
             />
-            <button
-              class="password-toggle"
-              type="button"
-              aria-label="Mostrar/ocultar senha"
-              title="Mostrar/ocultar senha"
-              onclick="togglePassword()"
-            >
-              👁️
-            </button>
+            
+              <img src="/frontend/src/assets/img/icons8-eye-50.png" class="password-toggle" id="eyeicon">
+            
           </div>
 
           <label class="terms">
@@ -115,7 +109,7 @@
           </label>
 
           <div class="actions">
-            <button class="btn btn-primary" type="submit">
+            <button class="btn btn-primary" type="submit" id="submit-btn">
               Enviar inscrição
             </button>
             <button class="btn btn-secondary" type="reset">Limpar</button>
@@ -160,6 +154,6 @@
       Inscrição enviada com sucesso! ✓
     </div>
 
-    <script src="/frontend/src/assets/utils/js/forms.js"></script>
+    <script src="/frontend/src/assets/utils/js/fetch.js"></script>
   </body>
 </html>
