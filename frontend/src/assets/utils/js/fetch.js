@@ -1,5 +1,5 @@
 const apiUrl = "http://localhost:8000/api/";
-async function criarProduto(event) {
+async function criarUsuarios(event) {
   event.preventDefault();
 
   const nome_completo = document.getElementById("nome").value;
@@ -7,15 +7,17 @@ async function criarProduto(event) {
   const turma = document.getElementById("turma").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const modalidadeId = document.getElementById("nome").value;
 
   const data_nascimento = dataInput;
 
   const data = {
     nome_completo: nome_completo,
-    data_nascimento: data_nascimento,
+    data_nascimento: new Date(dataInput).toISOString().split("T")[0],
     turma: turma,
     email: email,
     senha: senha,
+    modalidade: parseInt(modalidadeId),
   };
 
   try {
@@ -40,18 +42,30 @@ async function criarProduto(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submit-btn").addEventListener("click", criarProduto);
+  document
+    .getElementById("submit-btn")
+    .addEventListener("click", criarUsuarios);
 });
 
-let eyeicon = document.getElementById("eyeicon");
-let password = document.getElementById("password");
+async function getmodalidades() {
+  try {
+    const response = await fetch(apiUrl + "modalidades/");
+    const modalidades = await response.json();
 
-eyeicon.onclick = function(){
-  if(password.type == "password"){
-    password.type = "text";
-    eyeicon.src = "/frontend/src/assets/img/icons8-eye-50.png";
-  }else {
-    password = "password";
-    eyeicon.src = "/frontend/src/assets/img/icons8-closed-eye-50.png";
+    const select = document.getElementById("nome_modalidade");
+    select.innerHTML = '<option value="">Selecione uma modalidade</option>';
+
+    modalidades.forEach((modalidade) => {
+      const option = document.createElement("option");
+      option.value = modalidade.id;
+      option.textContent = modalidade.nome;
+      select.appendChild(option);
+    });
+  } catch (error) {
+    console.error("Erro ao carregar modalidades:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  getmodalidades();
+});
