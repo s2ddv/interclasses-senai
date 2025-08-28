@@ -206,8 +206,7 @@ body {
   transform: translateY(-50%);
   padding: 2rem;
   font-family: "Neue Plak Extended SemiBold";
-  background:
-    radial-gradient(
+  background: radial-gradient(
       600px 340px at 100% 0%,
       rgba(229, 57, 53, 0.12),
       transparent 60%
@@ -228,8 +227,7 @@ body {
   transform: translateY(-50%);
   padding: 2rem;
   font-family: "Neue Plak Extended SemiBold";
-  background:
-    radial-gradient(
+  background: radial-gradient(
       600px 340px at 100% 0%,
       rgba(229, 57, 53, 0.12),
       transparent 60%
@@ -254,8 +252,7 @@ body {
   font-family: "Neue Plak Extended SemiBold";
   flex-direction: column;
   align-items: center;
-  background:
-    radial-gradient(
+  background: radial-gradient(
       600px 340px at 100% 0%,
       rgba(229, 57, 53, 0.12),
       transparent 60%
@@ -341,7 +338,7 @@ body {
   overflow: hidden;
 }
 
-.header {
+.header-1 {
   padding: 28px 28px 0;
   display: flex;
   align-items: center;
@@ -406,10 +403,7 @@ select {
   color: var(--text);
   padding: 12px 14px;
   font-size: 15px;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.02s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.02s ease;
 }
 input::placeholder {
   color: #9aa8bd;
@@ -453,10 +447,7 @@ select:focus {
   border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
-  transition:
-    transform 0.02s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.02s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .btn:active {
   transform: translateY(1px);
@@ -495,8 +486,7 @@ select:focus {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  background:
-    radial-gradient(
+  background: radial-gradient(
       600px 340px at 100% 0%,
       rgba(229, 57, 53, 0.12),
       transparent 60%

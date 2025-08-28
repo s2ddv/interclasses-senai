@@ -144,3 +144,8 @@ header {
 .btn--action:active {
   box-shadow: 0 5px #1c1d20;
 }
+
+#link-formulario {
+  text-align: center;
+  font-family: 1.3rem;
+}
