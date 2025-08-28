@@ -8,11 +8,13 @@ class ModalidadesSerializer(serializers.ModelSerializer):
           fields = '__all__'
 
 class UsuariosSerializer(serializers.ModelSerializer):
-     modalidade = serializers.StringRelatedField()
+    modalidade = serializers.PrimaryKeyRelatedField(
+        queryset=Modalidades.objects.all()
+    )
 
-     class Meta:
-          model = Usuarios
-          fields = ['id', 'nome_completo', 'data_nascimento', 'turma', 'email', 'senha', 'modalidade']
+    class Meta:
+        model = Usuarios
+        fields = ['id', 'nome_completo', 'data_nascimento', 'turma', 'email', 'senha', 'modalidade']
 
 from rest_framework.permissions import IsAuthenticated
 

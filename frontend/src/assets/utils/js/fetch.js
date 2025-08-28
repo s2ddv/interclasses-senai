@@ -1,4 +1,5 @@
 const apiUrl = "http://localhost:8000/api/";
+
 async function criarUsuarios(event) {
   event.preventDefault();
 
@@ -7,9 +8,12 @@ async function criarUsuarios(event) {
   const turma = document.getElementById("turma").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
-  const modalidadeId = document.getElementById("nome").value;
+  const modalidadeId = document.getElementById("nome_modalidade").value;
 
-  const data_nascimento = dataInput;
+  if (!modalidadeId) {
+    alert("Selecione uma modalidade antes de enviar!");
+    return;
+  }
 
   const data = {
     nome_completo: nome_completo,
@@ -35,17 +39,12 @@ async function criarUsuarios(event) {
 
     const usuarioCriado = await response.json();
     console.log("Usuário criado com sucesso:", usuarioCriado);
+    alert("Usuário criado com sucesso!");
   } catch (error) {
     console.error("Erro ao criar usuário:", error);
     alert("Erro: " + error.message);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("submit-btn")
-    .addEventListener("click", criarUsuarios);
-});
 
 async function getmodalidades() {
   try {
@@ -68,4 +67,7 @@ async function getmodalidades() {
 
 document.addEventListener("DOMContentLoaded", () => {
   getmodalidades();
+  document
+    .getElementById("submit-btn")
+    .addEventListener("click", criarUsuarios);
 });
